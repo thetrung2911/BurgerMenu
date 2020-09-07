@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sub Menu View Controller-->
+        <scene sceneID="Tnv-ga-v1o">
+            <objects>
+                <viewController storyboardIdentifier="SubMenuViewController" id="obL-nM-F58" customClass="SubMenuViewController" customModule="SideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHK-TH-qpO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxv-0k-68P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="597.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-wt-wt7">
+                                <rect key="frame" x="41.5" y="555" width="331" height="66.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IS3-wt-wt7" secondAttribute="height" multiplier="5" id="smS-lm-ra6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackAction:" destination="obL-nM-F58" eventType="touchUpInside" id="odl-O7-XQa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-r4-DBO">
+                                <rect key="frame" x="41.5" y="481" width="331" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U3g-r4-DBO" secondAttribute="height" multiplier="5" id="Qte-Bn-KCG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="QUYẾT ĐỊNH">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDecisionAction:" destination="obL-nM-F58" eventType="touchUpInside" id="bpt-Ms-3Jl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-SK-TbZ">
+                                <rect key="frame" x="33.5" y="52" width="20" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="onCloseAction:" destination="obL-nM-F58" eventType="touchUpInside" id="SC5-WC-qaE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wxv-0k-68P" firstAttribute="top" secondItem="hUH-jk-uXS" secondAttribute="top" id="986-kY-qTg"/>
+                            <constraint firstItem="U3g-r4-DBO" firstAttribute="height" secondItem="IS3-wt-wt7" secondAttribute="height" id="GhW-ZZ-kL5"/>
+                            <constraint firstItem="wxv-0k-68P" firstAttribute="height" secondItem="EHK-TH-qpO" secondAttribute="height" multiplier="2/3" id="HjJ-Ly-40p"/>
+                            <constraint firstItem="IS3-wt-wt7" firstAttribute="top" secondItem="U3g-r4-DBO" secondAttribute="bottom" constant="8" id="Noy-7A-hmb"/>
+                            <constraint firstItem="U3g-r4-DBO" firstAttribute="width" secondItem="IS3-wt-wt7" secondAttribute="width" id="ObW-7t-1HS"/>
+                            <constraint firstItem="IS3-wt-wt7" firstAttribute="width" secondItem="EHK-TH-qpO" secondAttribute="width" multiplier="0.8" id="Rhd-JE-3WE"/>
+                            <constraint firstItem="wxv-0k-68P" firstAttribute="bottom" secondItem="IS3-wt-wt7" secondAttribute="bottom" constant="20" id="nip-PM-82Z"/>
+                            <constraint firstItem="hUH-jk-uXS" firstAttribute="trailing" secondItem="wxv-0k-68P" secondAttribute="trailing" id="o7p-uf-glp"/>
+                            <constraint firstItem="U3g-r4-DBO" firstAttribute="centerX" secondItem="hUH-jk-uXS" secondAttribute="centerX" id="qjz-YM-Lml"/>
+                            <constraint firstItem="wxv-0k-68P" firstAttribute="leading" secondItem="hUH-jk-uXS" secondAttribute="leading" id="tps-fL-CRo"/>
+                            <constraint firstItem="IS3-wt-wt7" firstAttribute="centerX" secondItem="hUH-jk-uXS" secondAttribute="centerX" id="war-BP-vRn"/>
+                            <constraint firstItem="WfG-SK-TbZ" firstAttribute="top" secondItem="hUH-jk-uXS" secondAttribute="top" constant="8" id="zUV-r0-PCI"/>
+                            <constraint firstItem="WfG-SK-TbZ" firstAttribute="leading" secondItem="U3g-r4-DBO" secondAttribute="leading" constant="-8" id="ze8-H8-Djl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hUH-jk-uXS"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="IS3-wt-wt7" id="sIN-fP-W5o"/>
+                        <outlet property="closeButton" destination="WfG-SK-TbZ" id="qNl-y0-h1e"/>
+                        <outlet property="containerView" destination="wxv-0k-68P" id="gp1-5F-62q"/>
+                        <outlet property="decisionButton" destination="U3g-r4-DBO" id="ZfI-yn-7hA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaS-ei-q6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear" catalog="system" width="128" height="114"/>
+    </resources>
+</document>

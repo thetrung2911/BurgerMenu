@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="llp-uc-MF7">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="wOM-lO-HtH" customClass="MenuViewController" customModule="SideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhv-vH-YZR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-9a-ycq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="597.5"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ec-8Z-v59">
+                                <rect key="frame" x="0.0" y="74" width="414" height="473"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wOM-lO-HtH" id="0qP-mJ-kLT"/>
+                                    <outlet property="delegate" destination="wOM-lO-HtH" id="IUO-c1-Kkp"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-yc-6P8">
+                                <rect key="frame" x="41.5" y="555" width="331" height="66.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gjp-yc-6P8" secondAttribute="height" multiplier="5" id="jfq-Vn-7Hm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackAction:" destination="wOM-lO-HtH" eventType="touchUpInside" id="Ej2-El-qpS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2Ec-8Z-v59" firstAttribute="centerX" secondItem="50U-mj-Is6" secondAttribute="centerX" id="3XH-j8-cp4"/>
+                            <constraint firstItem="Gjp-yc-6P8" firstAttribute="width" secondItem="Lhv-vH-YZR" secondAttribute="width" multiplier="0.8" id="9cL-L8-mM2"/>
+                            <constraint firstItem="6Hf-9a-ycq" firstAttribute="bottom" secondItem="Gjp-yc-6P8" secondAttribute="bottom" constant="20" id="KG7-Gv-W7a"/>
+                            <constraint firstItem="6Hf-9a-ycq" firstAttribute="centerX" secondItem="50U-mj-Is6" secondAttribute="centerX" id="N11-Oj-23o"/>
+                            <constraint firstItem="2Ec-8Z-v59" firstAttribute="width" secondItem="Lhv-vH-YZR" secondAttribute="width" id="QdM-RC-Ylw"/>
+                            <constraint firstItem="2Ec-8Z-v59" firstAttribute="top" secondItem="50U-mj-Is6" secondAttribute="top" constant="30" id="aZG-2g-W73"/>
+                            <constraint firstItem="6Hf-9a-ycq" firstAttribute="top" secondItem="50U-mj-Is6" secondAttribute="top" id="bdn-MB-P5D"/>
+                            <constraint firstItem="Gjp-yc-6P8" firstAttribute="top" secondItem="2Ec-8Z-v59" secondAttribute="bottom" constant="8" id="dNK-Wt-mFo"/>
+                            <constraint firstItem="Gjp-yc-6P8" firstAttribute="centerX" secondItem="50U-mj-Is6" secondAttribute="centerX" id="nwf-Ee-MvZ"/>
+                            <constraint firstItem="6Hf-9a-ycq" firstAttribute="height" secondItem="Lhv-vH-YZR" secondAttribute="height" multiplier="2/3" id="sPm-FV-wM5"/>
+                            <constraint firstItem="6Hf-9a-ycq" firstAttribute="width" secondItem="Lhv-vH-YZR" secondAttribute="width" id="wfd-Ht-CcJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="50U-mj-Is6"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Gjp-yc-6P8" id="ueG-H2-ZqO"/>
+                        <outlet property="containerView" destination="6Hf-9a-ycq" id="6BD-gp-uBJ"/>
+                        <outlet property="menuTableView" destination="2Ec-8Z-v59" id="i7c-71-lIL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag5-5l-b6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.85507246376812" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
